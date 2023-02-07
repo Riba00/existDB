@@ -13,52 +13,70 @@
     ~~~
     //CD[ARTIST='Tina Turner']/TITLE/text()
     ~~~
-    ![](../../Imatges/Selecció_005.png)
+    <p align="center">
+        <img src="captures/1.png" alt="">
+    </p>
 
     - Mostra els artistes dels CDs de la EU.
     ~~~
     //CD[COUNTRY='UK']/ARTIST/text()
     ~~~
-    ![](../../Imatges/Selecció_004.png)
+    <p align="center">
+        <img src="captures/2.png" alt="">
+    </p>
 
     - Mostra els artistes dels CDs que no siguin de la EU.
     ~~~
     //CD[COUNTRY!='UK']/ARTIST/text()
     ~~~
-    ![](../../Imatges/Selecció_006.png)
+    <p align="center">
+        <img src="captures/3.png" alt="">
+    </p>
 
     - Mostra el títol concatenat amb l'any dels CDs de Andrea Bocelli.
     ~~~
     concat(//CD[ARTIST='Andrea Bocelli']/TITLE/text()," ",//CD[ARTIST='Andrea Bocelli']/YEAR/text())
     ~~~
-    ![](../../Imatges/Selecció_007.png)
+    <p align="center">
+        <img src="captures/4.png" alt="">
+    </p>
 
     - Mostra els títols dels CDs anteriors a 1990.
     ~~~
     //CD[YEAR<1990]/TITLE/text()
     ~~~
-    ![](../../Imatges/Selecció_008.png)
+    <p align="center">
+        <img src="captures/5.png" alt="">
+    </p>
 
     - Mostra els títols dels CDs de 1990 o posteriors.
     ~~~
     //CD[YEAR>=1990]/TITLE/text()
     ~~~
-    ![](../../Imatges/Selecció_009.png)
+    <p align="center">
+        <img src="captures/6.png" alt="">
+    </p>
 
     - Mostra els títols dels CDs que tinguin un preu inferior a 9 o superior a 10.
     ~~~
     //CD[PRICE<9 or PRICE>10]/TITLE/text()
     ~~~
-    ![](../../Imatges/Selecció_010.png)
+    <p align="center">
+        <img src="captures/7.png" alt="">
+    </p>
 
     - Mostra els títols dels CDs que tinguin un preu inferior a 10 i superior a 9.
     ~~~
     //CD[PRICE<10 or PRICE>9]/TITLE/text()
     ~~~
-    ![](../../Imatges/Selecció_011.png)
+    <p align="center">
+        <img src="captures/8.png" alt="">
+    </p>
 
     - Mostra els artistes dels CDs de la companyia EMI.
     ~~~
     //CD[COMPANY='EMI']/ARTIST/text()
     ~~~
-![](../../Imatges/Selecció_012.png)
+    <p align="center">
+        <img src="captures/9.png" alt="">
+    </p>
