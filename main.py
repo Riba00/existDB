@@ -29,6 +29,8 @@ window.title("Riba xPath")
 window.geometry("500x800")
 
 
+
+
 xPathLabel = tk.Label(master=window, text="xPath experssion: ", width="50")
 xPathText = tk.Text(master=window, height="2", width="40")
 queryButton = tk.Button(master=window, text="Consultar", command=ferQuery)
