@@ -117,15 +117,15 @@ def insertTreballador():
             statusInsertTreballadorLabel.config(text="DNI ja llistat")
         else:
             insertQuery = """update insert 
-                            <treballador>
-                                <departament>""" + str(departament) + """</departament>
-                                <dni>""" + str(dni) + """</dni>
-                                <nom>""" + nom + """</nom>
-                                <cognom>""" + cognom + """</cognom>
-                                <telefon>""" + str(telefon) + """</telefon>
-                                <mail>""" + mail + """</mail>
-                                <sou>""" + str(sou) + """</sou>
-                                </treballador> 
+                            <treballador>\n
+                                <departament>""" + str(departament) + """</departament>\n
+                                <dni>""" + str(dni) + """</dni>\n
+                                <nom>""" + nom + """</nom>\n
+                                <cognom>""" + cognom + """</cognom>\n
+                                <telefon>""" + str(telefon) + """</telefon>\n
+                                <mail>""" + mail + """</mail>\n
+                                <sou>""" + str(sou) + """</sou>\n
+                                </treballador>\n 
                             into /personal"""
             if ferQuery(insertQuery):
                 statusInsertTreballadorLabel.config(text="Treballador insertat correctament")
@@ -146,11 +146,12 @@ def insertTreballador():
 def deleteTreballador():
     dni = dniDeleteEntry.get()
 
-    deleteQuery = """update delete //treballador[dni='""" + dni + """']"""
+    if existsDni(dni):
+        deleteQuery = """update delete //treballador[dni='""" + dni + """']"""
 
-    if ferQuery(deleteQuery):
-        statusDeleteTreballadorLabel.config(text="Treballador eliminat correctament")
-        dniDeleteEntry.delete(0, tk.END)
+        if ferQuery(deleteQuery):
+            statusDeleteTreballadorLabel.config(text="Treballador eliminat correctament")
+            dniDeleteEntry.delete(0, tk.END)
     else:
         statusDeleteTreballadorLabel.config(text="DNI incorrecte")
 
